@@ -4,7 +4,6 @@ figura.moveTo(10, 10);
 figura.lineTo(10, 40);
 figura.lineTo(40, 40);
 figura.lineTo(10, 10);
-
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
@@ -19,3 +18,4 @@ var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
 document.body.appendChild( renderizador.domElement );
 renderizador.render( escena, camara );
+
