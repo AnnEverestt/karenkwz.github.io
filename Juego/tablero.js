@@ -9,14 +9,14 @@ figura.lineTo(10, 10);
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 5} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
-malla.rotateX( Math.PI);
+malla.rotateX( Math.2*PI);
 malla.rotateY( Math.PI);
 var escena = new THREE.Scene();
 escena.add(malla);
 
 
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 100;
+camara.position.z = 150;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*1, window.innerHeight*1 );
