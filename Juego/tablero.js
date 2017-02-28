@@ -6,10 +6,10 @@ figura.lineTo(40, 40);
 figura.lineTo(40, 10);
 figura.lineTo(10, 10);
 
-var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
+var forma = new THREE.ExtrudeGeometry( figura,{amount: 5} );
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
-malla.rotateX( Math.PI/2 );
+malla.rotateX( Math.PI);
 malla.rotateY( Math.PI);
 var escena = new THREE.Scene();
 escena.add(malla);
