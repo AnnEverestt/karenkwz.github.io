@@ -22,8 +22,8 @@ figura
 var formas = new THREE.ExtrudeGeometry( figura,{amount: 1} );
 var materials = new THREE.MeshNormalMaterial();
 var mallas = new THREE.Mesh( formas, materials );
-mallas.rotateY( Math.PI/4);
-mallas.rotateY( Math.PI/4);
+mallas.rotateY( Math.PI/2);
+mallas.rotateY( Math.PI/2);
 
 escena.add(mallas);
 
