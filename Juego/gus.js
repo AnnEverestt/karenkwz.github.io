@@ -5,9 +5,14 @@ for ( var i = 0; i < 50; i ++ ) {
 var forma = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
 
-var esferaForma = new THREE.SphereGeometry(5, 32, 32);
-var materialt = new THREE.MeshNormalMaterial();
-var esfera = new THREE.Mesh(esferaForma,materialt)
+var points = [];
+for ( var i = 0; i < 10; i ++ ) {
+	points.push( new THREE.Vector2( Math.sin( i * 0.2 ) * 10 + 5, ( i - 5 ) * 2 ) );
+}
+var geometry = new THREE.LatheGeometry( points );
+var material1 = new THREE.MeshNormalMaterial(  );
+var lathe = new THREE.Mesh( geometry, material1 );
+
 
 var malla = new THREE.Mesh( forma, material );
 malla.rotateX( Math.PI/6 );
@@ -16,7 +21,7 @@ malla.rotateX( Math.PI/6 );
 
 var escena = new THREE.Scene();
 escena.add(malla);
-escena.add(esfera)
+scene.add( lathe );
 
 
 var camara = new THREE.PerspectiveCamera();
