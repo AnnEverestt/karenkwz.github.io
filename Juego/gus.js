@@ -6,20 +6,25 @@ var forma = new THREE.LatheGeometry(puntos);
 var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 malla.rotateX( Math.PI/6 );
+var escena = new THREE.Scene();
+escena.add(malla);
+var figura = new THREE.Shape();
 
-var puntoss = [];
-for ( var j = 0; j < 50; j ++ ) {
-    puntoss.push( new THREE.Vector2(Math.cos( i * 2)*15+30, ( i -5) * 2 ) );
-}
-var formas = new THREE.LatheGeometry(puntoss);
-var materials = new THREE.MeshNormalMaterial();
-var mallas = new THREE.Mesh( formas, materials );
-mallas.rotateX( Math.PI/6 )
+figura.moveTo(5, 5);
+figura.lineTo(5, 40);
+figura.lineTo(40, 40);
+figura.lineTo(40, 5);
+figura.lineTo(5, 5);
 
+var forma = new THREE.ExtrudeGeometry( figura,{amount: 1} );
+var material = new THREE.MeshNormalMaterial();
+var malla = new THREE.Mesh( forma, material );
+malla.rotateY( Math.PI/2 );
+malla.rotateY( Math.PI/2 );
 
 var escena = new THREE.Scene();
 escena.add(malla);
-escena.add(mallas);
+
 
 
 
