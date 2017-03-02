@@ -7,9 +7,19 @@ var material = new THREE.MeshNormalMaterial();
 var malla = new THREE.Mesh( forma, material );
 malla.rotateX( Math.PI/6 );
 
+var puntoss = [];
+for ( var j = 0; j < 50; j ++ ) {
+    puntoss.push( new THREE.Vector2(Math.cos( i * 2)*15+30, ( i -5) * 2 ) );
+}
+var formas = new THREE.LatheGeometry(puntoss);
+var materials = new THREE.MeshNormalMaterial();
+var mallas = new THREE.Mesh( formas, materials );
+malla.rotateX( Math.PI/6 )
+
 
 var escena = new THREE.Scene();
 escena.add(malla);
+escena.add(mallas);
 
 
 
