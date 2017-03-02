@@ -19,6 +19,7 @@ malla.rotateX( Math.PI/6 );
 
 var escena = new THREE.Scene();
 escena.add(malla);
+escena.add(esferamalla)
 
 
 var camara = new THREE.PerspectiveCamera();
