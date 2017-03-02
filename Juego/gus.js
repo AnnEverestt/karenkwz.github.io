@@ -9,9 +9,16 @@ malla.rotateX( Math.PI/6 );
 var escena = new THREE.Scene();
 escena.add(malla);
 
-var geometry = new THREE.SphereBufferGeometry( 5, 32, 32 );
-var material = new THREE.MeshBasicMaterial();
-var sphere = new THREE.Mesh( geometry, material );
+var cara = [];
+for ( var i = 50; i < 25; i ++ ) {
+    puntos.push( new THREE.Vector2(Math.sin(i), ( i -5) * 2 ) );
+}
+var forma = new THREE.LatheGeometry(cara);
+var material = new THREE.MeshNormalMaterial();
+var malla = new THREE.Mesh( forma, material );
+malla.rotateX( Math.PI/6 );
+var escena = new THREE.Scene();
+escena.add(malla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 500;
