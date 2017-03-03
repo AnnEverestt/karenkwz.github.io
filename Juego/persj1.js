@@ -12,14 +12,14 @@ forma.vertices.push( new THREE.Vector3(-50, 150,  50 ) ); // Vértice 7
 
 forma.faces.push( new THREE.Face3( 0, 1, 2 ) ); // Cara 0
 forma.faces.push( new THREE.Face3( 2, 3, 0 ) ); // Cara 1
-forma.faces.push( new THREE.Face3( 0, 4, 1 ) );
-forma.faces.push( new THREE.Face3( 1, 4, 5 ) );
-forma.faces.push( new THREE.Face3( 5, 1, 2 ) );
-forma.faces.push( new THREE.Face3( 2, 5, 6 ) );
+forma.faces.push( new THREE.Face3( 0, 1, 5 ) );
+forma.faces.push( new THREE.Face3( 5, 4, 0 ) );
+forma.faces.push( new THREE.Face3( 0, 4, 7 ) );
+forma.faces.push( new THREE.Face3( 7, 3, 0 ) );
+forma.faces.push( new THREE.Face3( 3, 7, 6 ) );
 forma.faces.push( new THREE.Face3( 6, 2, 3 ) );
-forma.faces.push( new THREE.Face3( 3, 6, 7 ) );
-forma.faces.push( new THREE.Face3( 7, 4, 3 ) );
-forma.faces.push( new THREE.Face3( 3, 0, 4 ) );
+forma.faces.push( new THREE.Face3( 2, 6, 5 ) );
+forma.faces.push( new THREE.Face3( 5, 1, 2 ) );
 forma.faces.push( new THREE.Face3( 4, 5, 6 ) );
 forma.faces.push( new THREE.Face3( 6, 7, 4 ) );
 
