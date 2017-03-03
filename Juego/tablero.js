@@ -1,6 +1,6 @@
 var tablero = new THREE.Shape();
 
-tablero.moveTo(0, 0);
+tablero.moveTo(5, 5);
 tablero.lineTo(5, 40);
 tablero.lineTo(40, 40);
 tablero.lineTo(40, 5);
