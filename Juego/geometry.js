@@ -1,15 +1,13 @@
 var troncoForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
 var esferaForma = new THREE.SphereGeometry(25);
-var centro = new THREE.TorusBufferGeometry( 20, 3, 16, 100 );
 esferaForma.translate(0,1,0);
 
 var troncoMalla = new THREE.Mesh(troncoForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
-var centroMalla = new THREE.Mesh(centro)
 var arbolForma = new THREE.Geometry();
 arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
 arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
-arbolForma.merge(centroMalla.geometry, centroMalla.matrix);
+
 
 var material = new THREE.MeshNormalMaterial();
 var arbolMalla = new THREE.Mesh(arbolForma, material);
