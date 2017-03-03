@@ -1,10 +1,10 @@
 var figura = new THREE.Shape();
 
-figura.moveTo(10, 10);
-figura.lineTo(10, 100);
+figura.moveTo(0, 0);
+figura.lineTo(0, 100);
 figura.lineTo(100, 100);
-figura.lineTo(100, 10);
-figura.lineTo(10, 10);
+figura.lineTo(100, 0);
+figura.lineTo(0, 0);
 
 var forma = new THREE.ExtrudeGeometry( figura,{amount: 10} );
 var material = new THREE.MeshNormalMaterial();
