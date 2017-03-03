@@ -1,9 +1,9 @@
 var tablero = new THREE.Shape();
 
 tablero.moveTo(5, 5);
-tablero.lineTo(5, 40);
-tablero.lineTo(40, 40);
-tablero.lineTo(40, 5);
+tablero.lineTo(5, 100);
+tablero.lineTo(100, 100);
+tablero.lineTo(100, 5);
 tablero.lineTo(5, 5);
 
 var tablero = new THREE.ExtrudeGeometry( tablero,{amount: 2} );
