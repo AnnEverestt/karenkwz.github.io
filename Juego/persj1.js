@@ -1,12 +1,12 @@
 var forma=new THREE.Geometry();
-forma.vertices.push( new THREE.Vector3( 5,  0,  5 ) ); // Vértice 0
-forma.vertices.push( new THREE.Vector3( 5,  0, -5 ) ); // Vértice 1
-forma.vertices.push( new THREE.Vector3(-5,  0, -5 ) ); // Vértice 2
-forma.vertices.push( new THREE.Vector3(-5,  0,  5 ) ); // Vértice 3
-forma.vertices.push( new THREE.Vector3( 5, 15,  5 ) ); // Vértice 4
-forma.vertices.push( new THREE.Vector3( 5, 15, -5 ) ); // Vértice 5
-forma.vertices.push( new THREE.Vector3(-5, 15, -5 ) ); // Vértice 6
-forma.vertices.push( new THREE.Vector3(-5, 15,  5 ) ); // Vértice 7
+forma.vertices.push( new THREE.Vector3( 50,  0,  50 ) ); // Vértice 0
+forma.vertices.push( new THREE.Vector3( 50,  0, -50 ) ); // Vértice 1
+forma.vertices.push( new THREE.Vector3(-50,  0, -50 ) ); // Vértice 2
+forma.vertices.push( new THREE.Vector3(-50,  0,  50 ) ); // Vértice 3
+forma.vertices.push( new THREE.Vector3( 50, 150,  50 ) ); // Vértice 4
+forma.vertices.push( new THREE.Vector3( 50, 150, -50 ) ); // Vértice 5
+forma.vertices.push( new THREE.Vector3(-50, 150, -50 ) ); // Vértice 6
+forma.vertices.push( new THREE.Vector3(-50, 150,  50 ) ); // Vértice 7
 
 
 
