@@ -1,5 +1,5 @@
 var troncoForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
-var esferaForma = new THREE.SphereGeometry(25);
+var esferaForma = new THREE.SphereGeometry(5);
 esferaForma.translate(0,1,0);
 
 var troncoMalla = new THREE.Mesh(troncoForma);
