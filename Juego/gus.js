@@ -11,7 +11,7 @@ escena.add(malla);
 
 var figura = new THREE.Shape();
 
-figura.moveTo(0, 0);
+figura.moveTo(-10, -10);
 figura.lineTo(5, 60);
 figura.lineTo(60, 60);
 figura.lineTo(60, 5);
