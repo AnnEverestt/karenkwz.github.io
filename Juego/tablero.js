@@ -60,26 +60,9 @@ forma2.computeFaceNormals();
 var material2 = new THREE.MeshNormalMaterial();
 var malla2 = new THREE.Mesh( forma2, material2 );
 
-//POR UNION DE MALLAS
-var cuerpoforma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
-var esferaForma = new THREE.SphereGeometry(25);
-esferaForma.translate(-300,50,-300);
-var cuerpoMalla = new THREE.Mesh(cuerpoForma);
-var esferaMalla = new THREE.Mesh(esferaForma);
-var soldadoForma = new THREE.Geometry();
-soldadoForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
-soldadoForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
-var material3 = new THREE.MeshNormalMaterial();
-var soldadoMalla = new THREE.Mesh(soldadoForma, material3);
 
-//REVOLUCION
-var puntos = [];
-for ( var i = 0; i < 50; i ++ ) {
-    puntos.push( new THREE.Vector2(Math.cos( i * 0.5)*15+30, ( i -5) * 2 ) );
-var forma3 = new THREE.LatheGeometry(puntos);
-var material3 = new THREE.MeshNormalMaterial();
-var malla3 = new THREE.Mesh( forma3, material3 );
+
   
 
 
@@ -87,11 +70,11 @@ var malla3 = new THREE.Mesh( forma3, material3 );
 var escena = new THREE.Scene();
 escena.add(malla1);
 escena.add( malla2 );
-escena.add(soldadoMalla);
-escena.add(malla3);
+
+
 malla1.rotateX(Math.PI/6);
 malla2.rotateX(Math.PI/6);
-malla3.rotateX( Math.PI/6 );
+
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1000;
 
