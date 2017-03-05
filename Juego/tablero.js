@@ -11,14 +11,21 @@ var malla1 = new THREE.Mesh( forma1, material1 );
 
 //UNION DE MALLAS
 var aspasForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
-aspasForma.translate(-250,100,-250);
+aspasForma.translate(-300,75,-300);
 var esferaForma = new THREE.SphereGeometry(25);
-esferaForma.translate(-250,100,-250);
+esferaForma.translate(-300,100,-300);
+var toroForma = new THREE.TorusGeometry( 10, 3, 16, 100 );
+toroForma.translate(-300,100,-300);
+
+scene.add( torus );
 var aspasMalla = new THREE.Mesh(aspasForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
+var toroMalla= new THREE.Mesh(toroForma)
+
 var forma3 = new THREE.Geometry();
 forma3.merge(aspasMalla.geometry, aspasMalla.matrix);
 forma3.merge(esferaMalla.geometry, esferaMalla.matrix);
+forma3.merge(toroMalla.geometry, toroMalla.matrix);
 var material3 = new THREE.MeshNormalMaterial();
 var forma3Malla = new THREE.Mesh(forma3, material3);
 
