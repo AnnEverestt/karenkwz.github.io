@@ -65,6 +65,33 @@ var forma6 = new THREE.LatheGeometry(puntos2);
 var material6 = new THREE.MeshNormalMaterial();
 var malla6 = new THREE.Mesh( forma6, material6 );
 
+//Vertices
+var forma=new THREE.Geometry();
+forma7.vertices.push( new THREE.Vector3( 50,  0,  50 ) ); // Vértice 0
+forma7.vertices.push( new THREE.Vector3( 50,  0, -50 ) ); // Vértice 1
+forma7.vertices.push( new THREE.Vector3(-50,  0, -50 ) ); // Vértice 2
+forma7.vertices.push( new THREE.Vector3(-50,  0,  50 ) ); // Vértice 3
+forma7.vertices.push( new THREE.Vector3( 50, 100,  50 ) ); // Vértice 4
+forma7.vertices.push( new THREE.Vector3( 50, 100, -50 ) ); // Vértice 5
+forma7.vertices.push( new THREE.Vector3(-50, 100, -50 ) ); // Vértice 6
+forma7.vertices.push( new THREE.Vector3(-50, 100,  50 ) ); // Vértice 7
+forma7.faces.push( new THREE.Face3( 0, 1, 2 ) ); // Cara 0
+forma7.faces.push( new THREE.Face3( 2, 3, 0 ) ); // Cara 1
+forma7.faces.push( new THREE.Face3( 0, 1, 5 ) );
+forma7.faces.push( new THREE.Face3( 5, 4, 0 ) );
+forma7.faces.push( new THREE.Face3( 0, 4, 7 ) );
+forma7.faces.push( new THREE.Face3( 7, 3, 0 ) );
+forma7.faces.push( new THREE.Face3( 3, 7, 6 ) );
+forma7.faces.push( new THREE.Face3( 6, 2, 3 ) );
+forma7.faces.push( new THREE.Face3( 2, 6, 5 ) );
+forma7.faces.push( new THREE.Face3( 5, 1, 2 ) );
+forma7.faces.push( new THREE.Face3( 4, 5, 6 ) );
+forma7.faces.push( new THREE.Face3( 6, 7, 4 ) );
+forma7.computeBoundingSphere();
+forma7.computeFaceNormals();
+var material7 = new THREE.MeshNormalMaterial();
+var malla7 = new THREE.Mesh( forma7, material7 );
+malla7.rotateX(Math.PI/4);
 
 //ESCENA
 var escena = new THREE.Scene();
@@ -72,6 +99,7 @@ escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla5);
+escena.add(malla7);
 escena.add(malla6);
 malla1.rotateY( Math.PI );
 forma3Malla.rotateY( Math.PI );
