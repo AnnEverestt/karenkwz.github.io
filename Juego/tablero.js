@@ -47,7 +47,7 @@ var puntos1 = [];
 for ( var i = 0; i < 50; i ++ ) {
     puntos1.push( new THREE.Vector3(
                      Math.sin( i ) * 15 + 50,
-                     ( i +50), -100 ));
+                     ( i +50), -300 ));
 }
 var forma5 = new THREE.LatheGeometry(puntos1);
 var material5 = new THREE.MeshNormalMaterial();
@@ -56,7 +56,7 @@ var malla5 = new THREE.Mesh( forma5, material5 );
 var puntos2 = [];
 for ( var j = 0; j < 50; j ++ ) {
     puntos2.push( new THREE.Vector3(
-                     Math.sin( j ) * 15 + 50,
+                     Math.sin( j*0.2 ) * 15 + 50,
                      ( j +50), -100 ));
 }
 
