@@ -12,14 +12,14 @@ var malla1 = new THREE.Mesh( forma1, material1 );
 //FIGURA POR VERTICES
 var forma2=new THREE.Geometry();
 //cuerpo VERTICES
-forma2.vertices.push( new THREE.Vector3( 25,  0,  25 ) ); // Vértice 0
-forma2.vertices.push( new THREE.Vector3( 25,  0, -25 ) ); // Vértice 1
-forma2.vertices.push( new THREE.Vector3(-25,  0, -25 ) ); // Vértice 2
-forma2.vertices.push( new THREE.Vector3(-25,  0,  25 ) ); // Vértice 3
-forma2.vertices.push( new THREE.Vector3( 25, 50,  25 ) ); // Vértice 4
-forma2.vertices.push( new THREE.Vector3( 25, 50, -25 ) ); // Vértice 5
-forma2.vertices.push( new THREE.Vector3(-25, 50, -25 ) ); // Vértice 6
-forma2.vertices.push( new THREE.Vector3(-25, 50,  25 ) ); // Vértice 7
+forma2.vertices.push( new THREE.Vector3( -50,  0,  -150 ) ); // Vértice 0
+forma2.vertices.push( new THREE.Vector3( -25,  0, -150 ) ); // Vértice 1
+forma2.vertices.push( new THREE.Vector3(-25,  0, -175 ) ); // Vértice 2
+forma2.vertices.push( new THREE.Vector3(-50,  0,  -175 ) ); // Vértice 3
+forma2.vertices.push( new THREE.Vector3( -50, 50, -150 ) ); // Vértice 4
+forma2.vertices.push( new THREE.Vector3( -25, 50, -150 ) ); // Vértice 5
+forma2.vertices.push( new THREE.Vector3(-25, 50, -175 ) ); // Vértice 6
+forma2.vertices.push( new THREE.Vector3(-50, 50,  -175 ) ); // Vértice 7
 //brazo VERTICES
 forma2.vertices.push( new THREE.Vector3( 50,  0,  5 ) ); // Vértice 8--0
 forma2.vertices.push( new THREE.Vector3( 50,  0, -5 ) ); // Vértice 9---1
