@@ -46,9 +46,7 @@ var forma4Malla = new THREE.Mesh(forma4, material4);
 //REVOLUCION
 var puntos5 = [];
 for ( var i = 0; i < 50; i ++ ) {
-    puntos5.push( new THREE.Vector2(
-                     Math.sin( i * 3) * 15 + 50,
-                     ( i - 5 ) * 2 ) );
+    puntos5.push( new THREE.Vector2(Math.sin( i * 3) * 15 + 50,( i - 5 ) * 2 ) );
 }
 var forma5 = new THREE.LatheGeometry(puntos5);
 var material5 = new THREE.MeshNormalMaterial();
