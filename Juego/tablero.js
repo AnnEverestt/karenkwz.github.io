@@ -1,10 +1,10 @@
 //TABLERO
 var figura1 = new THREE.Shape();
-figura1.moveTo(-300, -300);
-figura1.lineTo(-300, 300);
-figura1.lineTo(300, 300);
-figura1.lineTo(300,-300);
-figura1.lineTo(-300, -300);
+figura1.moveTo(-350, -350);
+figura1.lineTo(-350, 350);
+figura1.lineTo(350, 350);
+figura1.lineTo(350,-350);
+figura1.lineTo(-350, -350);
 var forma1 = new THREE.ExtrudeGeometry( figura1,{amount: 10} );
 var material1 = new THREE.MeshNormalMaterial();
 var malla1 = new THREE.Mesh( forma1, material1 );
