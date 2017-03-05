@@ -54,7 +54,7 @@ var forma5 = new THREE.LatheGeometry(puntos1);
 var material5 = new THREE.MeshNormalMaterial();
 
 var malla5 = new THREE.Mesh( forma5, material5 );
-
+malla5.translate(250,20,-100);
 
 //ESCENA
 var escena = new THREE.Scene();
@@ -66,7 +66,7 @@ malla1.rotateY( Math.PI );
 forma3Malla.rotateY( Math.PI );
 forma4Malla.rotateY( Math.PI );
 malla5.rotateY( Math.PI/4 );
-malla5.rotateX( Math.PI);
+malla5.rotateX( Math.PI/2 );
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
 var renderizador = new THREE.WebGLRenderer();
