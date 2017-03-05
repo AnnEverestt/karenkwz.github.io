@@ -80,7 +80,7 @@ var escena = new THREE.Scene();
 escena.add(malla1);
 escena.add( malla2 );
 escena.add(soldadoMalla);
-malla1.rotateX(Math.PI/2)
+malla1.rotateX(Math.PI/2);
 malla2.rotateX(Math.PI/2);
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1100;
