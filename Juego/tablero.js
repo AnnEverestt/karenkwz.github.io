@@ -1,10 +1,10 @@
 //TABLERO
 var figura1 = new THREE.Shape();
-figura1.moveTo(-100, -100);
-figura1.lineTo(-100, 100);
-figura1.lineTo(100, 100);
-figura1.lineTo(100,-100);
-figura1.lineTo(-100, -100);
+figura1.moveTo(-300, -300);
+figura1.lineTo(-300, 300);
+figura1.lineTo(300, 300);
+figura1.lineTo(300,-300);
+figura1.lineTo(-300, -300);
 var forma1 = new THREE.ExtrudeGeometry( figura1,{amount: 10} );
 var material1 = new THREE.MeshNormalMaterial();
 var malla1 = new THREE.Mesh( forma1, material1 );
@@ -68,7 +68,7 @@ escena.add( malla2 );
 malla1.rotateX(Math.-(PI/2))
 malla2.rotateX(Math.-(PI/2));
 var camara = new THREE.PerspectiveCamera();
-camara.position.z = 500;
+camara.position.z = 700;
 
 var renderizador = new THREE.WebGLRenderer();
 renderizador.setSize( window.innerHeight*.95, window.innerHeight*.95 );
