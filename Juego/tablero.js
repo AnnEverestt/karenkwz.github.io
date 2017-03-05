@@ -51,7 +51,7 @@ escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
  
-malla.rotateZ( Math.PI/4 );
+malla1.rotateZ( Math.PI/4 );
 
 
 var camara = new THREE.PerspectiveCamera();
