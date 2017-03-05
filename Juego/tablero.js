@@ -92,6 +92,16 @@ forma7.computeFaceNormals();
 var material7 = new THREE.MeshNormalMaterial();
 var malla7 = new THREE.Mesh( forma7, material7 );
 
+//EXTRUSION
+var figura8 = new THREE.Shape();
+figura8.moveTo(-20, -20);
+figura8.lineTo(-20, 20);
+figura8.lineTo(20, 20);
+figura8.lineTo(-20, -20);
+var forma8 = new THREE.ExtrudeGeometry( figura8,{amount: 50} );
+var material8 = new THREE.MeshNormalMaterial();
+var malla8 = new THREE.Mesh( forma8, material8 );
+
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
@@ -100,12 +110,14 @@ escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla5);
 escena.add(malla7);
 escena.add(malla6);
+escena.add(malla8);//EXTRUSION
 malla1.rotateY( Math.PI );
 forma3Malla.rotateY( Math.PI );
 forma4Malla.rotateY( Math.PI );
 malla5.rotateY( Math.PI );
 malla5.rotateX( Math.PI/2 );
 malla7.rotateX(Math.PI/3);
+malla8.rotateX(Math.PI/4);
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
 var renderizador = new THREE.WebGLRenderer();
