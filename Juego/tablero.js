@@ -62,10 +62,11 @@ escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla5);
-malla1.rotateY( Math.PI/4 );
-forma3Malla.rotateY( Math.PI/4 );
-forma4Malla.rotateY( Math.PI/4 );
+malla1.rotateY( Math.PI );
+forma3Malla.rotateY( Math.PI );
+forma4Malla.rotateY( Math.PI );
 malla5.rotateY( Math.PI/4 );
+malla5.rotateX( Math.PI);
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
 var renderizador = new THREE.WebGLRenderer();
