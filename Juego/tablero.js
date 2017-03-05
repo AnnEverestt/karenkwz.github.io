@@ -42,6 +42,17 @@ forma4.merge(esferaMalla4.geometry, esferaMalla4.matrix);
 forma4.merge(toroMalla4.geometry, toroMalla4.matrix);
 var material4 = new THREE.MeshNormalMaterial();
 var forma4Malla = new THREE.Mesh(forma4, material4);
+//REVOLUCIÓN
+var puntos = [];
+for ( var i = 0; i < 50; i ++ ) {
+    puntos.push( new THREE.Vector2(
+                     Math.sin( i * 0.2 ) * 15 + 50,
+                     ( i - 5 ) * 2 ) );
+}
+var forma2 = new THREE.LatheGeometry(puntos);
+var material2 = new THREE.MeshNormalMaterial();
+
+var malla2 = new THREE.Mesh( forma2, material2 );
 
 
 
@@ -50,7 +61,9 @@ var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
-malla1.rotateX(Math.PI/2);
+escena.add(malla2);//REVOLUCIÓN
+malla1.rotateX(Math.PI/2);//TABLERO
+malla2.rotateX( Math.PI);//REVOLUCION
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1000;
