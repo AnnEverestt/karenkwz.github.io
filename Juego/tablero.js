@@ -101,7 +101,7 @@ figura8.lineTo(-20, -20);
 var forma8 = new THREE.ExtrudeGeometry( figura8,{amount: 100} );
 var material8 = new THREE.MeshNormalMaterial();
 var malla8 = new THREE.Mesh( forma8, material8 );
-malla8.translate(0,10,0);
+malla8.translate(100,10,100);
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
