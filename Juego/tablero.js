@@ -66,7 +66,7 @@ var material6 = new THREE.MeshNormalMaterial();
 var malla6 = new THREE.Mesh( forma6, material6 );
 
 //Vertices
-var forma=new THREE.Geometry();
+var forma7=new THREE.Geometry();
 forma7.vertices.push( new THREE.Vector3( 50,  0,  50 ) ); // Vértice 0
 forma7.vertices.push( new THREE.Vector3( 50,  0, -50 ) ); // Vértice 1
 forma7.vertices.push( new THREE.Vector3(-50,  0, -50 ) ); // Vértice 2
