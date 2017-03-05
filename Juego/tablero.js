@@ -72,7 +72,15 @@ soldadoForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
 var material3 = new THREE.MeshNormalMaterial();
 var soldadoMalla = new THREE.Mesh(soldadoForma, material3);
-
+//REVOLUCION
+var puntos = [];
+for ( var i = 0; i < 50; i ++ ) {
+    puntos.push( new THREE.Vector2(Math.cos( i * 0.5)*15+30, ( i -5) * 2 ) );
+var forma4 = new THREE.LatheGeometry(puntos);
+var material4 = new THREE.MeshNormalMaterial();
+var malla4 = new THREE.Mesh( forma4, material4 );
+malla4.rotateX( Math.PI/6 );
+  
 
 
 //ESCENA
@@ -80,6 +88,7 @@ var escena = new THREE.Scene();
 escena.add(malla1);
 escena.add( malla2 );
 escena.add(soldadoMalla);
+escena.add(mall4);
 malla1.rotateX(Math.PI/2);
 malla2.rotateX(Math.PI/2);
 var camara = new THREE.PerspectiveCamera();
