@@ -91,7 +91,6 @@ forma7.computeBoundingSphere();
 forma7.computeFaceNormals();
 var material7 = new THREE.MeshNormalMaterial();
 var malla7 = new THREE.Mesh( forma7, material7 );
-malla7.rotateX(Math.PI/4);
 
 //ESCENA
 var escena = new THREE.Scene();
@@ -106,6 +105,7 @@ forma3Malla.rotateY( Math.PI );
 forma4Malla.rotateY( Math.PI );
 malla5.rotateY( Math.PI );
 malla5.rotateX( Math.PI/2 );
+malla7.rotateX(Math.PI/4);
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
 var renderizador = new THREE.WebGLRenderer();
