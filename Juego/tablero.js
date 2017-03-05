@@ -56,7 +56,7 @@ escena.add(forma4Malla);//UNIONMALLA2
         
         
 malla1.rotateX(Math.PI/2);//TABLERO
-malla2.rotateX( Math.PI);//REVOLUCION
+
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
