@@ -77,9 +77,9 @@ var soldadoMalla = new THREE.Mesh(soldadoForma, material3);
 var puntos = [];
 for ( var i = 0; i < 50; i ++ ) {
     puntos.push( new THREE.Vector2(Math.cos( i * 0.5)*15+30, ( i -5) * 2 ) );
-var forma4 = new THREE.LatheGeometry(puntos);
+var forma3 = new THREE.LatheGeometry(puntos);
 var material3 = new THREE.MeshNormalMaterial();
-var malla3 = new THREE.Mesh( forma4, material3 );
+var malla3 = new THREE.Mesh( forma3, material3 );
 malla3.rotateX( Math.PI/6 );
   
 
