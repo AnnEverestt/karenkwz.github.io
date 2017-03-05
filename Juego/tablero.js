@@ -43,7 +43,16 @@ forma4.merge(toroMalla4.geometry, toroMalla4.matrix);
 var material4 = new THREE.MeshNormalMaterial();
 var forma4Malla = new THREE.Mesh(forma4, material4);
 
-
+//REVOLUCION
+var puntos5 = [];
+for ( var i = 0; i < 50; i ++ ) {
+    puntos5.push( new THREE.Vector2(
+                     Math.sin( i * 3) * 15 + 50,
+                     ( i - 5 ) * 2 ) );
+}
+var forma5 = new THREE.LatheGeometry(puntos5);
+var material5 = new THREE.MeshNormalMaterial();
+var malla5 = new THREE.Mesh( forma5, material5 );
 
 
 //ESCENA
@@ -51,6 +60,7 @@ var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
+escena.add(malla5);//REVOLUCION
 
 
         
