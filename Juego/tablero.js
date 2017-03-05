@@ -60,11 +60,27 @@ forma2.computeFaceNormals();
 var material2 = new THREE.MeshNormalMaterial();
 var malla2 = new THREE.Mesh( forma2, material2 );
 
+//POR UNION DE MALLAS
+var cuerpoforma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
+var esferaForma = new THREE.SphereGeometry(25);
+esferaForma.translate(-300,50,-300);
+var cuerpoMalla = new THREE.Mesh(cuerpoForma);
+var esferaMalla = new THREE.Mesh(esferaForma);
+var soldadoForma = new THREE.Geometry();
+soldadoForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
+soldadoForma.merge(esferaMalla.geometry, esferaMalla.matrix);
+
+
+var materia3 = new THREE.MeshNormalMaterial();
+var soldadoMalla = new THREE.Mesh(soldadoForma, material3);
+
+
 
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1);
 escena.add( malla2 );
+escena.add(soldadoMalla);
 malla1.rotateX(Math.PI*(3/4))
 malla2.rotateX(Math.PI*(3/4));
 var camara = new THREE.PerspectiveCamera();
