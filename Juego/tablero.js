@@ -14,9 +14,9 @@ var malla1 = new THREE.Mesh( forma1, material1 );
 var aspasForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
 aspasForma.translate(-300,80,-300);
 var esferaForma = new THREE.SphereGeometry(25);
-esferaForma.translate(-300,80,-300);
+esferaForma.translate(-350,80,-350);
 var toroForma = new THREE.TorusGeometry( 10, 3, 16, 100 );
-toroForma.translate(-300,80,-300);
+toroForma.translate(-350,80,-350);
 var aspasMalla = new THREE.Mesh(aspasForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
 var toroMalla= new THREE.Mesh(toroForma)
@@ -28,9 +28,9 @@ var material3 = new THREE.MeshNormalMaterial();
 var forma3Malla = new THREE.Mesh(forma3, material3);
 //MALLA2
 var aspasForma4 = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
-aspasForma4.translate(-300,75,-300);
+aspasForma4.translate(300,80,-300);
 var esferaForma4 = new THREE.SphereGeometry(25);
-esferaForma4.translate(-300,100,-300);
+esferaForma4.translate(300,80,-300);
 var toroForma4 = new THREE.TorusGeometry( 10, 3, 16, 100 );
 toroForma4.translate(-300,100,-300);
 var aspasMalla4 = new THREE.Mesh(aspasForma4);
@@ -42,18 +42,16 @@ forma4.merge(esferaMalla4.geometry, esferaMalla4.matrix);
 forma4.merge(toroMalla4.geometry, toroMalla4.matrix);
 var material4 = new THREE.MeshNormalMaterial();
 var forma4Malla = new THREE.Mesh(forma4, material4);
+
 //REVOLUCIÓN
 var puntos = [];
 for ( var i = 0; i < 50; i ++ ) {
     puntos.push( new THREE.Vector2(
-                     Math.sin( i * 0.2 ) * 15 + 50,
-                     ( i - 5 ) * 2 ) );
-}
+                     Math.sin( i * 0.2 ) * 15 + 50,( i - 5 ) * 2 ) );}
 var forma2 = new THREE.LatheGeometry(puntos);
 var material2 = new THREE.MeshNormalMaterial();
-
 var malla2 = new THREE.Mesh( forma2, material2 );
-
+malla2.translate(-300,80,-200);
 
 
 //ESCENA
