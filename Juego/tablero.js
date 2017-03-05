@@ -11,7 +11,7 @@ var malla1 = new THREE.Mesh( forma1, material1 );
 //UNION DE MALLAS
 var aspasForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
 var esferaForma = new THREE.SphereGeometry(25);
-esferaForma.translate(0,1,0);
+esferaForma.translate(0,100,0);
 
 var aspasMalla = new THREE.Mesh(aspasForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
@@ -28,7 +28,7 @@ var forma3Malla = new THREE.Mesh(forma3, material3);
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1);
-escena.add(arbolMalla);
+escena.add(forma3Malla);
 
 malla1.rotateX(Math.PI);
 var camara = new THREE.PerspectiveCamera();
