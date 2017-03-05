@@ -48,16 +48,13 @@ var puntos1 = [];
 for ( var i = 0; i < 50; i ++ ) {
     puntos1.push( new THREE.Vector2(
                      Math.sin( i * 4 ) ,i);}
-var puntos2 = [];
-for ( var j = 50; j < 53; j ++ ) {
-    puntos2.push( new THREE.Vector2(
-                     Math.sin( j * 2 )+1,j);}
+
 var forma2 = new THREE.LatheGeometry(puntos1);
-var forma5 = new THREE.LatheGeometry(puntos2);
 var material2 = new THREE.MeshNormalMaterial();
 var malla2 = new THREE.Mesh( forma2, material2 );
-var material5 = new THREE.MeshNormalMaterial();
-var malla5 = new THREE.Mesh( forma5, material5 );
+malla2.translate(-350,20,100);
+
+        
 
 
 //ESCENA
@@ -66,7 +63,6 @@ escena.add(malla1); //TABLERO
 escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla2);//REVOLUCIÓN
-escena.add(malla5);//REVOLUCIÓN
 
         
         
