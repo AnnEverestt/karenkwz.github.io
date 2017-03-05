@@ -70,8 +70,7 @@ var soldadoForma = new THREE.Geometry();
 soldadoForma.merge(cuerpoMalla.geometry, cuerpoMalla.matrix);
 soldadoForma.merge(esferaMalla.geometry, esferaMalla.matrix);
 
-
-var materia3 = new THREE.MeshNormalMaterial();
+var material3 = new THREE.MeshNormalMaterial();
 var soldadoMalla = new THREE.Mesh(soldadoForma, material3);
 
 
