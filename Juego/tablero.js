@@ -50,9 +50,7 @@ for ( var i = 0; i < 50; i ++ ) {
                      ( i - 5 ) * 2 ) );
 }
 var forma5 = new THREE.LatheGeometry(puntos1);
-
 var material5 = new THREE.MeshNormalMaterial();
-
 var malla5 = new THREE.Mesh( forma5, material5 );
 malla5.translate(250,20,-100);
 
