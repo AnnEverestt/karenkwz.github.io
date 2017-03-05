@@ -98,10 +98,10 @@ figura8.moveTo(-20, -20);
 figura8.lineTo(-20, 20);
 figura8.lineTo(20, 20);
 figura8.lineTo(-20, -20);
-var forma8 = new THREE.ExtrudeGeometry( figura8,{amount: 50} );
+var forma8 = new THREE.ExtrudeGeometry( figura8,{amount: 100} );
 var material8 = new THREE.MeshNormalMaterial();
 var malla8 = new THREE.Mesh( forma8, material8 );
-malla8.translate(-250,250,-100);
+malla8.translate(0,10,0);
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
