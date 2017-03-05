@@ -32,7 +32,7 @@ aspasForma4.translate(350,80,-350);
 var esferaForma4 = new THREE.SphereGeometry(25);
 esferaForma4.translate(350,80,-350);
 var toroForma4 = new THREE.TorusGeometry( 30, 3, 16, 100 );
-toroForma4.translate(350,100,-350);
+toroForma4.translate(350,80,-350);
 var aspasMalla4 = new THREE.Mesh(aspasForma4);
 var esferaMalla4 = new THREE.Mesh(esferaForma4);
 var toroMalla4= new THREE.Mesh(toroForma4)
