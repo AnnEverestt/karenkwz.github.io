@@ -17,7 +17,6 @@ esferaForma.translate(-300,100,-300);
 var toroForma = new THREE.TorusGeometry( 10, 3, 16, 100 );
 toroForma.translate(-300,100,-300);
 
-scene.add( torus );
 var aspasMalla = new THREE.Mesh(aspasForma);
 var esferaMalla = new THREE.Mesh(esferaForma);
 var toroMalla= new THREE.Mesh(toroForma)
