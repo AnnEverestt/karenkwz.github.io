@@ -91,7 +91,7 @@ forma7.computeBoundingSphere();
 forma7.computeFaceNormals();
 var material7 = new THREE.MeshNormalMaterial();
 var malla7 = new THREE.Mesh( forma7, material7 );
-malla7.translate(250,250,-100);
+
 //ESCENA
 var escena = new THREE.Scene();
 escena.add(malla1); //TABLERO
