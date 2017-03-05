@@ -58,8 +58,6 @@ var material2 = new THREE.MeshNormalMaterial();
 var malla2 = new THREE.Mesh( forma2, material2 );
 var material5 = new THREE.MeshNormalMaterial();
 var malla5 = new THREE.Mesh( forma5, material5 );
-malla2.translate(-350,50,-200);
-malla5.translate(-350,50,-200);
 
 
 //ESCENA
@@ -69,6 +67,8 @@ escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla2);//REVOLUCIÓN
 escena.add(malla5);//REVOLUCIÓN
+
+        
         
 malla1.rotateX(Math.PI/2);//TABLERO
 malla2.rotateX( Math.PI);//REVOLUCION
