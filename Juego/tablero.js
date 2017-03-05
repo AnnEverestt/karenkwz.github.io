@@ -63,8 +63,8 @@ escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla5);
 malla1.rotateY( Math.PI/4 );
-mallaforma3Malla.rotateY( Math.PI/4 );
-mallaforma4Malla.rotateY( Math.PI/4 );
+forma3Malla.rotateY( Math.PI/4 );
+forma4Malla.rotateY( Math.PI/4 );
 malla5.rotateY( Math.PI/4 );
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 1200;
