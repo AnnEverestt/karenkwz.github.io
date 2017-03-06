@@ -22,8 +22,8 @@ var escena = new THREE.Scene();
 
 escena.add(malla1); //TABLERO
 escena.add(malla2);
-malla1.rotateY( Math.PI/2 );
-malla2.rotateY( Math.PI/2 );
+malla1.rotateY( Math.PI/4 );
+malla2.rotateY( Math.PI/4 );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 200;
