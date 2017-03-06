@@ -11,7 +11,7 @@ var malla1 = new THREE.Mesh( forma1, material1 );
 var escena = new THREE.Scene();
 
 escena.add(malla1); //TABLERO
-malla1.rotateY( Math.PI );
+malla1.rotateY( Math.PI/2 );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 100;
