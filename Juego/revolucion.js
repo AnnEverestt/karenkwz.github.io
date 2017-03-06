@@ -13,9 +13,17 @@ malla.rotateX( Math.PI/6 );
 malla.rotateY( Math.PI/2 );
 
 
+var for2Forma = new THREE.SphereGeometry(25);
+for2Forma.translate(0,20,0);
+
+
+var material = new THREE.MeshNormalMaterial();
+var Malla2 = new THREE.Mesh(for2Forma, material);
+var escena = new THREE.Scene();
 
 var escena = new THREE.Scene();
 escena.add(malla);
+escena.add(Malla2);
 
 
 
