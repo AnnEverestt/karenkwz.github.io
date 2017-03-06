@@ -12,19 +12,10 @@ var malla = new THREE.Mesh( forma, material );
 malla.rotateX( Math.PI/6 );
 malla.rotateY( Math.PI/2 );
 
-var cabeza = new THREE.SphereGeometry( 20, 32, 32 );
-cabeza.translate(0,30,0);
-
-var material1 = new THREE.MeshNormalMaterial();
-var forma1 = new THREE.Mesh( cabeza, material1 );
-
-
 
 
 var escena = new THREE.Scene();
 escena.add(malla);
-escene.add(forma1);
-
 
 
 
