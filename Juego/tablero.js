@@ -53,18 +53,7 @@ var forma5 = new THREE.LatheGeometry(puntos1);
 var material5 = new THREE.MeshNormalMaterial();
 var malla5 = new THREE.Mesh( forma5, material5 );
 
-var puntos2 = [];
-for ( var j = 0; j < 50; j ++ ) {
-    puntos2.push( new THREE.Vector3(
-                     Math.sin( j*0.2 ) * 15 + 50,
-                     ( j +50), -100 ));
-}
 
-
-var forma6 = new THREE.LatheGeometry(puntos2);
-var material6 = new THREE.MeshNormalMaterial();
-var malla6 = new THREE.Mesh( forma6, material6 );
-malla6.translate(250,250,-100);
 
 //Vertices
 var forma7=new THREE.Geometry();
@@ -110,7 +99,6 @@ escena.add(forma3Malla);//UNIONMMALLA1
 escena.add(forma4Malla);//UNIONMALLA2
 escena.add(malla5);
 escena.add(malla7);
-escena.add(malla6);
 escena.add(malla8);//EXTRUSION
 malla1.rotateY( Math.PI );
 forma3Malla.rotateY( Math.PI );
