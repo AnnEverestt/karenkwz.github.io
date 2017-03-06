@@ -8,14 +8,6 @@ figura1.lineTo(-20, -20);
 var forma1 = new THREE.ExtrudeGeometry( figura1,{amount: 10} );
 var material1 = new THREE.MeshNormalMaterial();
 var malla1 = new THREE.Mesh( forma1, material1 );
-var figura2 = new THREE.Shape();
-figura2.moveTo(20, 10);
-figura2.lineTo(20, 20);
-figura2.lineTo(30, 15);
-figura2.lineTo(20, 10);
-var forma2 = new THREE.ExtrudeGeometry( figura2,{amount: 20} );
-var material2 = new THREE.MeshNormalMaterial();
-var malla2 = new THREE.Mesh( forma2, material2 );
 
 var figura2 = new THREE.Shape();
 figura2.moveTo(20, 10);
@@ -25,7 +17,6 @@ figura2.lineTo(20, 10);
 var forma2 = new THREE.ExtrudeGeometry( figura2,{amount: 20} );
 var material2 = new THREE.MeshNormalMaterial();
 var malla2 = new THREE.Mesh( forma2, material2 );
-
 
 var figura3 = new THREE.Shape();
 figura3.moveTo(-20, -10);
@@ -34,7 +25,7 @@ figura3.lineTo(-30, -15);
 figura3.lineTo(-20, -10);
 var forma3 = new THREE.ExtrudeGeometry( figura3,{amount: 20} );
 var material3 = new THREE.MeshNormalMaterial();
-var malla3 = new THREE.Mesh( forma13, material13 );
+var malla3 = new THREE.Mesh( forma3, material3 );
 
 var figura4 = new THREE.Shape();
 figura4.moveTo(20, -10);
