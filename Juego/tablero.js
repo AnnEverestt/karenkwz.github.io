@@ -64,6 +64,7 @@ for ( var j = 0; j < 50; j ++ ) {
 var forma6 = new THREE.LatheGeometry(puntos2);
 var material6 = new THREE.MeshNormalMaterial();
 var malla6 = new THREE.Mesh( forma6, material6 );
+malla6.translate(250,250,-100);
 
 //Vertices
 var forma7=new THREE.Geometry();
