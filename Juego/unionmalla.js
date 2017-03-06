@@ -1,18 +1,18 @@
-var troncoForma = new THREE.TorusKnotGeometry( 50, 3, 100, 16 );
-var esferaForma = new THREE.SphereGeometry(25);
-esferaForma.translate(0,1,0);
+var for1Forma =new THREE.RingGeometry( 1, 5, 32 );
+var for2Forma = new THREE.SphereGeometry(25);
+for2Forma.translate(0,1,0);
 
-var troncoMalla = new THREE.Mesh(troncoForma);
-var esferaMalla = new THREE.Mesh(esferaForma);
-var arbolForma = new THREE.Geometry();
-arbolForma.merge(troncoMalla.geometry, troncoMalla.matrix);
-arbolForma.merge(esferaMalla.geometry, esferaMalla.matrix);
+var for1Malla = new THREE.Mesh(for1Forma);
+var for2Malla = new THREE.Mesh(for2Forma);
+var Forma = new THREE.Geometry();
+Forma.merge(for1Malla.geometry, for1Malla.matrix);
+Forma.merge(for2Malla.geometry, for2Malla.matrix);
 
 
 var material = new THREE.MeshNormalMaterial();
-var arbolMalla = new THREE.Mesh(arbolForma, material);
+var Malla = new THREE.Mesh(Forma, material);
 var escena = new THREE.Scene();
-escena.add(arbolMalla);
+escena.add(Malla);
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 400;
