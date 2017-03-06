@@ -47,10 +47,11 @@ var malla5 = new THREE.Mesh( forma5, material5 );
 
 
 var figura6 = new THREE.Shape();
-figura6.moveTo(-20, -10);
-figura6.lineTo(-20, -20);
-figura6.lineTo(-30, -15);
-figura6.lineTo(-20, -10);
+figura6.moveTo(-5, -5);
+figura6.lineTo(-5, 5);
+figura6.lineTo(5, 5);
+figura6.lineTo(5,-5);
+figura6.lineTo(-5, -5);
 var forma6 = new THREE.ExtrudeGeometry( figura6,{amount: 20} );
 var material6 = new THREE.MeshNormalMaterial();
 var malla6 = new THREE.Mesh( forma6, material6 );
