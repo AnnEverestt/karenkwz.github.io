@@ -20,6 +20,8 @@ var malla2 = new THREE.Mesh( forma2, material2 );
 
 
 
+var escena = new THREE.Scene();
+
 escena.add(malla1); //TABLERO
 escena.add(malla2);
 
