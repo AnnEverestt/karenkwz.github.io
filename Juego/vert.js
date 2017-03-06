@@ -9,7 +9,31 @@ forma.vertices.push( new THREE.Vector3( 50, 100, -50 ) ); // Vértice 5
 forma.vertices.push( new THREE.Vector3(-50, 100, -50 ) ); // Vértice 6
 forma.vertices.push( new THREE.Vector3(-50, 100,  50 ) ); // Vértice 7
 
-//brazo VERTICES
+//brazo2 VERTICES
+forma.vertices.push( new THREE.Vector3( -50,  0,  -25 ) ); // Vértice 16--- 8
+forma.vertices.push( new THREE.Vector3( -50,  0, 25 ) ); // Vértice 17 ---9
+forma.vertices.push( new THREE.Vector3(75,  0, 25 ) ); // Vértice 18 --10
+forma.vertices.push( new THREE.Vector3(75,  0,  -25 ) ); // Vértice 19 --11
+forma.vertices.push( new THREE.Vector3( -50, 50,  -25 ) ); // Vértice 20--- 12
+forma.vertices.push( new THREE.Vector3( -50, 50, 25 ) ); // Vértice 21 --13
+forma.vertices.push( new THREE.Vector3(75, 50, 25 ) ); // Vértice 22--- 14
+forma.vertices.push( new THREE.Vector3(75, 50,  -25 ) ); // Vértice 23-- 15
+
+//brazo CARAS
+
+forma.faces.push( new THREE.Face3( 16, 17,18 ) ); // Cara 0
+forma.faces.push( new THREE.Face3( 18, 19, 16) ); // Cara 1
+forma.faces.push( new THREE.Face3( 16,17, 21 ) );
+forma.faces.push( new THREE.Face3( 21, 20, 16 ) );
+forma.faces.push( new THREE.Face3( 16, 20, 23 ) );
+forma.faces.push( new THREE.Face3( 23, 19, 16 ) );
+forma.faces.push( new THREE.Face3( 19, 23, 22 ) );
+forma.faces.push( new THREE.Face3( 22, 18, 19 ) );
+forma.faces.push( new THREE.Face3( 18, 22, 21 ) );
+forma.faces.push( new THREE.Face3( 21, 17, 18 ) );
+forma.faces.push( new THREE.Face3( 20, 21, 22 ) );
+forma.faces.push( new THREE.Face3( 22, 23, 20 ) );
+//brazo1 VERTICES
 forma.vertices.push( new THREE.Vector3( 50,  0,  25 ) ); // Vértice 8--0
 forma.vertices.push( new THREE.Vector3( 50,  0, -25 ) ); // Vértice 9---1
 forma.vertices.push( new THREE.Vector3(-75,  0, -25 ) ); // Vértice 10---2
