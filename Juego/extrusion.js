@@ -1,18 +1,17 @@
 //EXTRUSION
-var figura8 = new THREE.Shape();
-figura8.moveTo(-20, -20);
-figura8.lineTo(-20, 20);
-figura8.lineTo(20, 20);
-figura8.lineTo(-20, -20);
-
-var forma8 = new THREE.ExtrudeGeometry( figura8,{amount: 100} );
-var material8 = new THREE.MeshNormalMaterial();
-var malla8 = new THREE.Mesh( forma8, material8 );
-
+var figura1 = new THREE.Shape();
+figura1.moveTo(-20, -20);
+figura1.lineTo(-20, 20);
+figura1.lineTo(20, 20);
+figura1.lineTo(20,-20);
+figura1.lineTo(-20, -20);
+var forma1 = new THREE.ExtrudeGeometry( figura1,{amount: 70} );
+var material1 = new THREE.MeshNormalMaterial();
+var malla1 = new THREE.Mesh( forma1, material1 );
 var escena = new THREE.Scene();
-escena.add(malla8); //TABLERO
-malla8.rotateX(Math.PI/4);
 
+escena.add(malla1); //TABLERO
+malla1.rotateY( Math.PI );
 
 var camara = new THREE.PerspectiveCamera();
 camara.position.z = 100;
