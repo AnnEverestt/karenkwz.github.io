@@ -36,6 +36,16 @@ var forma4 = new THREE.ExtrudeGeometry( figura4,{amount: 20} );
 var material4 = new THREE.MeshNormalMaterial();
 var malla4 = new THREE.Mesh( forma4, material4 );
 
+var figura5 = new THREE.Shape();
+figura5.moveTo(-20, -10);
+figura5.lineTo(-20, -20);
+figura5.lineTo(-30, -15);
+figura5.lineTo(-20, -10);
+var forma5 = new THREE.ExtrudeGeometry( figura5,{amount: 20} );
+var material5 = new THREE.MeshNormalMaterial();
+var malla5 = new THREE.Mesh( forma5, material5 );
+
+
 
 var escena = new THREE.Scene();
 
@@ -43,11 +53,13 @@ escena.add(malla1); //TABLERO
 escena.add(malla2);
 escena.add(malla3);
 escena.add(malla4);
+escena.add(malla5);
 
 malla1.rotateY( Math.PI/4 );
 malla2.rotateY( Math.PI/4 );
 malla3.rotateY( Math.PI/4 );
 malla4.rotateY( Math.PI/4 );
+malla5.rotateY( Math.PI/4 );
 
 
 
