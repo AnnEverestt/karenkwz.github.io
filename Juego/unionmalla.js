@@ -1,6 +1,7 @@
-var for1Forma =new THREE.RingGeometry( 1, 5, 32 );
+var for1Forma =new THREE.ConeBufferGeometry( 20, 20, 32 );
 var for2Forma = new THREE.SphereGeometry(25);
-for2Forma.translate(0,1,0);
+for2Forma.translate(0,20,0);
+
 
 var for1Malla = new THREE.Mesh(for1Forma);
 var for2Malla = new THREE.Mesh(for2Forma);
