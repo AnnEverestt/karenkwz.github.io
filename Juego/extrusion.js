@@ -23,7 +23,7 @@ figura3.moveTo(-20, 10);
 figura3.lineTo(-20, 20);
 figura3.lineTo(-30, 15);
 figura3.lineTo(-20, 10);
-var forma3 = new THREE.ExtrudeGeometry( figura2,{amount: 20} );
+var forma3 = new THREE.ExtrudeGeometry( figura3,{amount: 20} );
 var material3 = new THREE.MeshNormalMaterial();
 var malla3 = new THREE.Mesh( forma3, material3 );
 
