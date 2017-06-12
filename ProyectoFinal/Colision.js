@@ -70,10 +70,10 @@ function setup(){
                     window.innerHeight*.95 );
   document.body.appendChild( renderer.domElement );
 
-  stepx = 0.05;
-  stepy = 0.03;
-  step  =0.01;
-  stepbrazo = 0.017;
+  stepx = 0.5;
+  stepy = 0.3;
+  step  =0.1;
+  stepbrazo = 0.17;
   rotacionx=-1;
   rotaciony=-1;
 }
