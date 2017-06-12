@@ -11,7 +11,7 @@ function personaje(x=0, y=0){
   var brazos = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/rojo.gif');
   var pies = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/azul.gif');  
   
-  this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3,100,100),new THREE.MeshPhongMaterial({map:cara}));
+  this.cuerpo = new THREE.Mesh(new THREE.BoxGeometry(4,4,4),new THREE.MeshPhongMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,2),new THREE.MeshPhongMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,2),new THREE.MeshPhongMaterial({map:brazos}));
   this.pieI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
