@@ -169,7 +169,7 @@ function setup(){
  entorno.setMap(mapa);
  steppie=0.1;
  stepbrazo = 0.017;
- luzPuntual = new THREE.PointLight(0x0000FF);
+ luzPuntual = new THREE.PointLight(0xF2ADF2);
  luzPuntual.position.x=0;  
  luzPuntual.position.y=10;
  luzPuntual.position.z=30;
