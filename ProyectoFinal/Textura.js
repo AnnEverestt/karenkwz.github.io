@@ -2,7 +2,7 @@ function Completo(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
   var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/colores.gif');
-  var brazos = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/crate.gif');
+  var brazos = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/rojo.gif');
   var pies = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/azul.gif');  
   
   
