@@ -14,8 +14,8 @@ function personaje(x=0, y=0){
   this.cuerpo = new THREE.Mesh(new THREE.BoxGeometry(3,3,3),new THREE.MeshPhongMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,2),new THREE.MeshPhongMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,2),new THREE.MeshPhongMaterial({map:brazos}));
-  this.pieI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
-  this.pieD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
+  this.pieI = new THREE.Mesh(new THREE.BoxGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
+  this.pieD = new THREE.Mesh(new THREE.BoxGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
  
    this.sensor=new Sensor();
  this.actuator=new Array();
