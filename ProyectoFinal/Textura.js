@@ -7,7 +7,7 @@ function Completo(){
   
   
    
-  this.cuerpo = new THREE.Mesh(new THREE.BoxGeometry(4,4,4),new THREE.MeshLambertMaterial({map:cara}));
+  this.cuerpo = new THREE.Mesh(new THREE.BoxGeometry(5,5,5),new THREE.MeshLambertMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshLambertMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshLambertMaterial({map:brazos}));
   this.pieI = new THREE.Mesh(new THREE.BoxGeometry(2,1,0.5),new THREE.MeshLambertMaterial({map:pies}));
