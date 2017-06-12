@@ -33,13 +33,13 @@ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFina
 Completo.prototype = new THREE.Object3D();
 
 function setup(){
-  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 30, 5),
+  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 3, 30, 5),
                           new THREE.MeshNormalMaterial());
-  cubo2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 50, 5),
+  cubo2 = new THREE.Mesh( new THREE.BoxGeometry( 3, 50, 5),
                           new THREE.MeshNormalMaterial());
-  cubo3 = new THREE.Mesh( new THREE.BoxGeometry( 60, 1, 5),
+  cubo3 = new THREE.Mesh( new THREE.BoxGeometry( 60, 3, 5),
                           new THREE.MeshNormalMaterial());
-  cubo4 = new THREE.Mesh( new THREE.BoxGeometry( 60, 1, 5),
+  cubo4 = new THREE.Mesh( new THREE.BoxGeometry( 60, 3, 5),
                           new THREE.MeshNormalMaterial());
   pelota = new Completo();
                           
