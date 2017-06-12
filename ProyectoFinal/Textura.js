@@ -14,7 +14,7 @@ function Completo(){
   this.pieD = new THREE.Mesh(new THREE.BoxGeometry(2,1,0.5),new THREE.MeshLambertMaterial({map:pies}));
   
   this.brazoI.position.z=2.3;
-  this.brazoD.position.z=-2.3;
+  this.brazoD.position.z=2.3;
   this.pieD.position.y=-3;
   this.pieD.position.z=1;
   this.pieI.position.y=-3;
@@ -22,7 +22,7 @@ function Completo(){
   this.pieD.position.x=1;
   this.pieI.position.x=1;
   this.brazoD.rotation.x=1.5;
-  this.brazoI.rotation.x=-1.5;
+  this.brazoI.rotation.x=1.5;
   
   this.add(this.pieI)
   this.add(this.pieD)
@@ -34,7 +34,7 @@ function Completo(){
 Completo.prototype = new THREE.Object3D();
 
 function setup(){
-  kirby = new Completo();
+  personaje = new Completo();
   
   step  =0.01;
   stepbrazo = 0.017;
@@ -45,7 +45,7 @@ function setup(){
   luzPuntual.position.z=30;
   
   escena = new THREE.Scene();
-  escena.add(kirby);
+  escena.add(personaje);
   escena.add(luzPuntual);
     
  camara = new THREE.PerspectiveCamera();
@@ -58,19 +58,19 @@ function setup(){
 function loop(){
 requestAnimationFrame( loop );
 renderer.render (escena, camara);
-if (Math.abs(kirby.pieD.rotation.z) > .3 )
+if (Math.abs(personaje.pieD.rotation.z) > .3 )
   step = -step;
 
-if (Math.abs(kirby.brazoD.rotation.x) > 2 || Math.abs(kirby.brazoD.rotation.x) < 1)
+if (Math.abs(personaje.brazoD.rotation.x) > 2 || Math.abs(personaje.brazoD.rotation.x) < 1)
   stepbrazo = -stepbrazo;
 
-kirby.brazoD.rotation.x += stepbrazo;
-kirby.brazoI.rotation.x += stepbrazo;
-kirby.pieD.rotation.z += step;
-kirby.pieI.rotation.z -= step;
+personajey.brazoD.rotation.x += stepbrazo;
+personaje.brazoI.rotation.x += stepbrazo;
+personaje.pieD.rotation.z += step;
+personaje.pieI.rotation.z -= step;
 
 //kirby.rotation.x += 0.01;
-kirby.rotation.y += 0.01;
+personaje.rotation.y += 0.01;
 }
 
 var escena, camara, renderer;
