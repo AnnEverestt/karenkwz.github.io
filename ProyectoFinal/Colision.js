@@ -33,7 +33,7 @@ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFina
 Completo.prototype = new THREE.Object3D();
 
 function setup(){
-  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 57, 5),
+  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 40, 5),
                           new THREE.MeshNormalMaterial());
   cubo2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 57, 5),
                           new THREE.MeshNormalMaterial());
