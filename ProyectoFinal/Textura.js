@@ -1,9 +1,9 @@
 function Completo(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
-  var cara = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/12899665_10153684992446843_1267488120_n.jpg');
-  var brazos = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/12899665_10153684992446843_1267488120_n.jpg');
-  var pies = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/12899665_10153684992446843_1267488120_n.jpg');  
+  var cara = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/crate.gif');
+  var brazos = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/crate.gif');
+  var pies = THREE.ImageUtils.loadTexture('https://github.com/KarenKwz/karenkwz.github.io/blob/master/ProyectoFinal/crate.gif');  
   
   
    
