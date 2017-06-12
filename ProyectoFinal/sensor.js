@@ -4,12 +4,12 @@ function Sensor(position,direction){
 }
 Sensor.prototype=new THREE.Raycaster();
 
-function kirby(x=0, y=0){
+function personaje(x=0, y=0){
   Agent.call(this,x,y);
   THREE.ImageUtils.crossOrigin = '';
-  var cara = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12899665_10153684992446843_1267488120_n.jpg');
-  var brazos = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12899889_10153685013876843_569751267_n.jpg');
-  var pies = THREE.ImageUtils.loadTexture('http://Ignacio121990.github.io/12919388_10153685013881843_2062601905_o.jpg');  
+ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/colores.gif');
+  var brazos = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/rojo.gif');
+  var pies = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/azul.gif');  
   
   this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3,100,100),new THREE.MeshPhongMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,4),new THREE.MeshPhongMaterial({map:brazos}));
@@ -18,7 +18,6 @@ function kirby(x=0, y=0){
   this.pieD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,1,0.5),new THREE.MeshPhongMaterial({map:pies}));
  
    this.sensor=new Sensor();
- //this.sensor2=new Sensor();
  this.actuator=new Array();
   this.brazoI.position.z=2.3;
   this.brazoD.position.z=-2.3;
@@ -37,7 +36,7 @@ function kirby(x=0, y=0){
   this.add(this.brazoD)
   this.add(this.cuerpo)
 }
-kirby.prototype=new Agent();
+personaje.prototype=new Agent();
 
 function Wall(size,x=0,y=0){
  THREE.Mesh.call(this,new THREE.BoxGeometry(size,size,size), new THREE.MeshNormalMaterial()); 
@@ -54,12 +53,12 @@ Environment.prototype.setMap=function(map){
    if(map[i][j]==="x")
     this.add(new Wall(1, j-offset,-(i-offset)));
    else if(map[i][j]==="r")
-    this.add(new kirby(j-offset,-(i-offset)));
+    this.add(new personaje(j-offset,-(i-offset)));
   }
  }
 }	
 
-kirby.prototype.sense=function(environment){
+personaje.prototype.sense=function(environment){
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
  //this.sensor2.set(this.position, new THREE.Vector3(Math.sin(this.rotation.z),Math.cos(this.rotation.z),0));
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
@@ -74,7 +73,7 @@ kirby.prototype.sense=function(environment){
   this.sensor2.colision=false;*/
 }
 
-kirby.prototype.plan = function(environment){
+personaje.prototype.plan = function(environment){
  this.actuator.commands=[];
  /*if(this.sensor.colision==false && this.sensor2.colision==true)
   this.actuator.commands.push('Derecho');
@@ -88,7 +87,7 @@ kirby.prototype.plan = function(environment){
    this.actuator.commands.push('Derecho');
 }
 
-kirby.prototype.act=function(environment){
+personaje.prototype.act=function(environment){
  var command=this.actuator.commands.pop();
  if(command==undefined)
   console.log('Undefined command');
@@ -98,9 +97,9 @@ kirby.prototype.act=function(environment){
   console.log('Unknown command'); 
 }
 
-kirby.prototype.operations = {};
+personaje.prototype.operations = {};
 
-kirby.prototype.operations.Derecho = function(robot,step){
+personaje.prototype.operations.Derecho = function(robot,step){
  if(step==undefined)
  step=0.01;
  robot.scale.x=0.5;
@@ -120,14 +119,14 @@ if (Math.abs(robot.brazoD.rotation.x) > 2 || Math.abs(robot.brazoD.rotation.x) <
  robot.pieI.rotation.z -= steppie;
 };
 
-kirby.prototype.operations.RotarDerecha = function(robot,angulo){
+personaje.prototype.operations.RotarDerecha = function(robot,angulo){
  if(angulo==undefined){
   angulo=-Math.PI/2;
  }
  robot.rotation.z+=angulo;
 };
 
-kirby.prototype.operations.RotarIzquierda = function(robot,angulo){
+personaje.prototype.operations.RotarIzquierda = function(robot,angulo){
  if(angulo==undefined){
   angulo=Math.PI/2;
  }
@@ -140,22 +139,22 @@ function setup(){
   mapa[1] = "x                          x";
   mapa[2] = "x                          x";
   mapa[3] = "x                          x";
-  mapa[4] = "x    r                     x";
+  mapa[4] = "x                   r      x";
   mapa[5] = "x                          x";
   mapa[6] = "xxxxxxxxxxxxxxxx    xxxxxxxx";
   mapa[7] = "x                          x";
   mapa[8] = "x                          x";
   mapa[9] = "x                          x";
  mapa[10] = "x                          x";
- mapa[11] = "x                          x";
+ mapa[11] = "xxxxx                      x";
  mapa[12] = "x                          x";
  mapa[13] = "x                          x";
  mapa[14] = "x                          x";
  mapa[15] = "x                          x";
  mapa[16] = "x                          x";
- mapa[17] = "x                          x";
- mapa[18] = "x                          x";
- mapa[19] = "x     r                    x";
+ mapa[17] = "x                    xxxxxxx";
+ mapa[18] = "x                    x     x";
+ mapa[19] = "x     r            xxx     x";
  mapa[20] = "x                          x";
  mapa[21] = "x                          x";
  mapa[22] = "x                          x";
@@ -163,13 +162,13 @@ function setup(){
  mapa[24] = "xxxxxxxxxxxxx           xxxx";
  mapa[25] = "x                          x";
  mapa[26] = "x                          x";
- mapa[27] = "x      r                   x";
+ mapa[27] = "x                    r     x";
  mapa[28] = "x                          x";
  mapa[29] = "xxxxxxxxxxxxxxxxxxxxxxxxxxxx";
  entorno=new Environment();
  entorno.setMap(mapa);
-  steppie=0.1;
-  stepbrazo = 0.017;
+ steppie=0.1;
+ stepbrazo = 0.017;
  luzPuntual = new THREE.PointLight(0xffffff);
  luzPuntual.position.x=0;  
  luzPuntual.position.y=10;
