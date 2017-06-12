@@ -7,7 +7,7 @@ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFina
   
   
    
-  this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3,100,100),new THREE.MeshBasicMaterial({map:cara}));
+  this.cuerpo = new THREE.Mesh(new THREE.BoxGeometry(3,3,3),new THREE.MeshBasicMaterial({map:cara}));
   this.brazoI = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshBasicMaterial({map:brazos}));
   this.brazoD = new THREE.Mesh(new THREE.CylinderGeometry(0.5,0.5,3),new THREE.MeshBasicMaterial({map:brazos}));
   this.pieI = new THREE.Mesh(new THREE.BoxGeometry(2,1,0.5),new THREE.MeshBasicMaterial({map:pies}));
@@ -33,9 +33,9 @@ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFina
 Completo.prototype = new THREE.Object3D();
 
 function setup(){
-  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 40, 5),
+  cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 1, 30, 5),
                           new THREE.MeshNormalMaterial());
-  cubo2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 57, 5),
+  cubo2 = new THREE.Mesh( new THREE.BoxGeometry( 1, 50, 5),
                           new THREE.MeshNormalMaterial());
   cubo3 = new THREE.Mesh( new THREE.BoxGeometry( 60, 1, 5),
                           new THREE.MeshNormalMaterial());
@@ -44,6 +44,7 @@ function setup(){
   pelota = new Completo();
                           
   cubo1.position.x = 30;
+  cubo1.position.y = -28;
   cubo2.position.x = -30;
   cubo3.position.y = 28;
   cubo4.position.y = -28;
