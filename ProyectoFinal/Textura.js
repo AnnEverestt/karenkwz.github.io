@@ -14,15 +14,15 @@ function Completo(){
   this.pieD = new THREE.Mesh(new THREE.BoxGeometry(2,1,0.5),new THREE.MeshLambertMaterial({map:pies}));
   
   this.brazoI.position.z=2.3;
-  this.brazoD.position.z-=2.3;
+  this.brazoD.position.z-=-2.3;
   this.pieD.position.y=-3;
   this.pieD.position.z=1;
   this.pieI.position.y=-3;
   this.pieI.position.z=-1;
   this.pieD.position.x=1;
   this.pieI.position.x=1;
-  this.brazoD.rotation.x=-1.5;
-  this.brazoI.rotation.x=1.5;
+  this.brazoD.rotation.x=1.5;
+  this.brazoI.rotation.x=-1.5;
   
   this.add(this.pieI)
   this.add(this.pieD)
