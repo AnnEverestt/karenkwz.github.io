@@ -58,14 +58,14 @@ function setup(){
 function loop(){
 requestAnimationFrame( loop );
 renderer.render (escena, camara);
-if (Math.abs(personaje.pieD.rotation.z) > .3 )
+if (Math.abs(personaje.pieD.rotation.z) > .1 )
   step = -step;
 
 if (Math.abs(personaje.brazoD.rotation.x) > 2 || Math.abs(personaje.brazoD.rotation.x) < 1)
   stepbrazo = -stepbrazo;
 
 personaje.brazoD.rotation.x += stepbrazo;
-personaje.brazoI.rotation.x += stepbrazo;
+personaje.brazoI.rotation.x -= stepbrazo;
 personaje.pieD.rotation.z += step;
 personaje.pieI.rotation.z -= step;
 
