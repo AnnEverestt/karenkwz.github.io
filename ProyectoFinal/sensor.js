@@ -60,27 +60,15 @@ Environment.prototype.setMap=function(map){
 
 personaje.prototype.sense=function(environment){
  this.sensor.set(this.position, new THREE.Vector3(Math.cos(this.rotation.z),Math.sin(this.rotation.z),0));
- //this.sensor2.set(this.position, new THREE.Vector3(Math.sin(this.rotation.z),Math.cos(this.rotation.z),0));
  var obstaculo = this.sensor.intersectObjects(environment.children,true);
- //var obstaculo2 = this.sensor2.intersectObjects(environment.children,true);
  if ((obstaculo.length>0&&(obstaculo[0].distance<=1.5)))
   this.sensor.colision=true;
  else
   this.sensor.colision=false;
- /*if((obstaculo2.length>0&&(obstaculo2[0].distance<=1)))
-  this.sensor2.colision=true;
- else
-  this.sensor2.colision=false;*/
 }
 
 personaje.prototype.plan = function(environment){
  this.actuator.commands=[];
- /*if(this.sensor.colision==false && this.sensor2.colision==true)
-  this.actuator.commands.push('Derecho');
- else if(this.sensor.colision==true && this.sensor2.colision==true)
-   this.actuator.commands.push('RotarDerecha');
- else
-   this.actuator.commands.push('RotarIzquierda');*/
   if(this.sensor.colision==true)
    this.actuator.commands.push('RotarIzquierda');
   else
