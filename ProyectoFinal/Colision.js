@@ -1,4 +1,4 @@
-function Completo(){
+function coision(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
 var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/colores.gif');
@@ -30,7 +30,7 @@ var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFina
   this.add(this.brazoD)
   this.add(this.cuerpo)
 }
-Completo.prototype = new THREE.Object3D();
+colision.prototype = new THREE.Object3D();
 
 function setup(){
   cubo1 = new THREE.Mesh( new THREE.BoxGeometry( 3, 30, 5),
