@@ -1,4 +1,4 @@
-function Completo(){
+function textura(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
   var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/colores.gif');
@@ -31,10 +31,10 @@ this.cuerpo = new THREE.Mesh(new THREE.SphereGeometry(3,100,100),new THREE.MeshL
   this.add(this.cuerpo)
 }
 
-Completo.prototype = new THREE.Object3D();
+textura.prototype = new THREE.Object3D();
 
 function setup(){
-  personaje = new Completo();
+  personaje = new textura();
   
   step  =0.01;
   stepbrazo = 0.017;
@@ -68,8 +68,6 @@ personaje.brazoD.rotation.x += stepbrazo;
 personaje.brazoI.rotation.x -= stepbrazo;
 personaje.pieD.rotation.z += step;
 personaje.pieI.rotation.z -= step;
-
-//kirby.rotation.x += 0.01;
 personaje.rotation.y += 0.01;
 }
 
