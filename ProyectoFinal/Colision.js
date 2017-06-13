@@ -1,4 +1,4 @@
-function coision(){
+function colision(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
 var cara = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/colores.gif');
