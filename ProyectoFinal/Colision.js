@@ -44,7 +44,7 @@ function setup(){
   pelota = new colision();
                           
   cubo1.position.x = 30;
-  cubo1.position.y = -5;
+  cubo1.position.y = 5;
   cubo2.position.x = -30;
   cubo3.position.y = 20;
   cubo4.position.y = -20;
