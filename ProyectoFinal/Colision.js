@@ -41,7 +41,7 @@ function setup(){
                           new THREE.MeshNormalMaterial());
   cubo4 = new THREE.Mesh( new THREE.BoxGeometry( 60, 3, 5),
                           new THREE.MeshNormalMaterial());
-  pelota = new Completo();
+  pelota = new colision();
                           
   cubo1.position.x = 30;
   cubo1.position.y = -5;
