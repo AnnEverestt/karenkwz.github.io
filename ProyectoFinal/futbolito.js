@@ -1124,16 +1124,16 @@ function loop(){
 
 var tablero, humano, marciano, camara, renderer, escena;
 renderizar();
-escenaTablero();
-escenaPelota();
-escenaEquipoMarciano();
-escenaEquipoHumano();
 var cubo1, cubo2, cubo3, cubo4, cubo5, cubo6, cubo7, pelota4, escena, camara, renderer;
 var raycaster1, raycaster2, raycaster3, raycaster4, raycaster5, raycaster6, step;
 var obstaculo1, obstaculo2, obstaculo3, obstaculo4, obstaculo5, obstaculo6;
 var step, stepx, stepy;
 
 setup();
+escenaTablero();
+escenaPelota();
+escenaEquipoMarciano();
+escenaEquipoHumano();
 loop();
 loop2();
 loop3();
