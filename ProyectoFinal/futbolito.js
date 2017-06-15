@@ -936,11 +936,6 @@ function setup(){
  escena.add ( cubo6 );
   escena.add ( pelota4 );
   escena.add ( camara );
-  
-  renderer = new THREE.WebGLRenderer();
-  renderer.setSize( window.innerHeight*.95,
-                    window.innerHeight*.95 );
-  document.body.appendChild( renderer.domElement );
 
   stepx = 0.5;
   stepy = 0.3;
