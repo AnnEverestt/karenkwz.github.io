@@ -558,7 +558,7 @@ raycaster5.set( pelota4.position, new THREE.Vector3(0,-1,0) );
 raycaster6.set( pelota4.position, new THREE.Vector3(0,-1,0) );
   
   renderer.render( escena, camara );
-  requestAnimationFrame( loop3 );
+
 }
 
 //////////////////TABLERO///////////////////////////////////
