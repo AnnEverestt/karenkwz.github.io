@@ -870,7 +870,7 @@ function loop2(){
 function colision(){
   THREE.Object3D.call(this);
   THREE.ImageUtils.crossOrigin = '';
-  var pelota2 = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/texturas-metal-18.gif');
+  var pelota2 = THREE.ImageUtils.loadTexture('https://karenkwz.github.io/ProyectoFinal/balo.gif');
   
   
    
